@@ -10,6 +10,22 @@ public class ExampleClass
 {
     public delegate void DoSomething(int num);
 
+    public DoSomething Something;
 
+    public ExampleClass()
+    {
+        Something = FunctionOne;
+      
+    }
+    public static void Main(string[] args)
+    {
+        ExampleClass example = new ExampleClass();
+        example.Something(456);
+    }
+    private void FunctionOne(int num)
+    {
+       Console.WriteLine($"FunctionOne called with value: {num}");
+
+    }
 
 }
