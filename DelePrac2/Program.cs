@@ -20,7 +20,7 @@ public class ExampleClass
     public static void Main(string[] args)
     {
         ExampleClass example = new ExampleClass();
-        example.Something(456);
+        example.Something?.Invoke(456);
     }
     private void FunctionOne(int num)
     {
